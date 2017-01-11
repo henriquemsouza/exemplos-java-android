@@ -1,0 +1,20 @@
+
+http://stackoverflow.com/questions/9627689/i-cant-get-intellij-to-recognise-my-android-sdk
+
+Press Ctrl+Shift+Alt+S (to access the Project Structure dialog)
+On the left navigation pane, click on 'Project Settings->Project'
+On the right navigation pane, you should see a drop-down list displaying '<No SDK>'
+Click on 'New', select 'JDK' and choose the path to your JDK
+Click on 'New', select 'Android SDK' and choose the path to your Android SDK
+Please note you have to define the JDK before the Android SDK.
+
+This procedure is documented at:
+
+https://www.jetbrains.com/idea/webhelp/configuring-global-project-and-module-sdks.html
+
+
+
+
+
+
+http://pt.androids.help/q22743
