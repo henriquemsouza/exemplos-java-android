@@ -1,0 +1,47 @@
+public class MainActivity extends AppCompatActivity {
+
+    private Button botao1;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        botao1=(Button)findViewById(R.id.btnID);
+
+        botao1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+
+                Intent intent1= new Intent(MainActivity.this, SegundaActivity.class);
+                intent1.putExtra("nome","henrique ");
+                startActivity( intent1 );
+            }
+        });
+    }
+}
+============================================================================
+
+
+public class SegundaActivity extends AppCompatActivity {
+
+    private TextView texto;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_segunda);
+
+        texto=(TextView) findViewById(R.id.txtID);
+
+        Bundle extra=getIntent() .getExtras();
+
+            if (extra !=null)
+            {
+              String TextoPassado=extra.getString("nome");
+                texto.setText(TextoPassado);
+
+            }
+    }
+}
