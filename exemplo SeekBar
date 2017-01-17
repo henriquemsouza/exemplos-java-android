@@ -1,0 +1,36 @@
+import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.SeekBar;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+    private SeekBar seekbar;
+    private TextView textoEXIBICAO;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+        seekbar=(SeekBar) findViewById(R.id.seekBarID);
+        textoEXIBICAO=(TextView) findViewById(R.id.txtResID);
+
+        seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                textoEXIBICAO.setText("Escolheu: "+progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+    }
+}
