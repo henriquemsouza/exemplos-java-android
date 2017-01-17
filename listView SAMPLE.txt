@@ -1,4 +1,3 @@
-extends
 
 
 AppCompatActivity>>>>>>>>Mostra Barra de menu
@@ -9,9 +8,9 @@ public class MainActivity extends Activity {
     private ListView ListaItens;
     private String[] itens=
     {
-            "Catas Altas", "Santa B·rbara", "Bar„o de Cocais", "Jo„o Monlevade", "S„o GonÁalo do Rio Abaixo",
-            "Itabira", "Bom Jesus do Amparo", "Bela Vista de Minas", "Rio Piracicaba", "AlvinÛpolis", "Dom SilvÈrio",
-            "Nova Era", "AntÙnio Dias", "Santa Maria de Itabira", "Ferros", "Mariana", "Ouro Preto", "Ponte Nova", "ViÁosa",
+            "Catas Altas", "Santa B√°rbara", "Bar√£o de Cocais", "Jo√£o Monlevade", "S√£o Gon√ßalo do Rio Abaixo",
+            "Itabira", "Bom Jesus do Amparo", "Bela Vista de Minas", "Rio Piracicaba", "Alvin√≥polis", "Dom Silv√©rio",
+            "Nova Era", "Ant√¥nio Dias", "Santa Maria de Itabira", "Ferros", "Mariana", "Ouro Preto", "Ponte Nova", "Vi√ßosa",
     };
 
     @Override
