@@ -1,0 +1,58 @@
+public class MainActivity extends Activity {
+    private Button botaoTocar;
+    private MediaPlayer mediaplayer;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        botaoTocar=(Button) findViewById(R.id.btnTocarID);
+        mediaplayer=MediaPlayer.create(MainActivity.this,R.raw.musica);
+
+        botaoTocar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                if (mediaplayer.isPlaying())
+                {
+                    PausarMusica();
+                }else
+                     {
+                         tocarMusica();
+                     }
+
+            }
+        });
+
+    }
+    private void tocarMusica()
+    {
+        if (mediaplayer != null)
+        {
+             mediaplayer.start();
+             botaoTocar.setText("Pausar");
+        }
+    }
+    private void PausarMusica()
+    {
+        if (mediaplayer != null)
+        {
+            mediaplayer.pause();
+            botaoTocar.setText("TOCAR");
+
+        }
+    }
+    @Override
+    protected void onDestroy() {
+        if (mediaplayer !=null && mediaplayer.isPlaying())
+        {
+            mediaplayer.stop();
+            mediaplayer.release();
+            mediaplayer= null ;
+        }
+        super.onDestroy();
+    }
+
+}
