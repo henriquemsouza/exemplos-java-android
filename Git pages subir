@@ -1,0 +1,16 @@
+abrir gitbash  no diretorio do projeto
+
+
+1  git init     //iniciar repositorio como git
+
+2  git remote add origin http://endereço do repositorio
+
+3  git add .   //para add todos arquivos do projeto de uma vez
+
+4  git status  //se quiser verificar conteudo 
+
+5  git commit -m "o -m é para escever mensagem " //commitar conteudo
+
+6  git push origin master
+
+
