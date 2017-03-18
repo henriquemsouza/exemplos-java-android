@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:paddingTop="1dp"
+    tools:context="com.hm.souza.trytodofloatingbtn.MainActivity"
+    android:background="#EF5D5E">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        app:srcCompat="@drawable/javaw"
+        android:id="@+id/imageView3"
+        android:layout_marginTop="2dp"
+        android:layout_height="30dp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="66dp"
+        android:id="@+id/ListViewID"
+        android:background="@android:color/darker_gray" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+
+        app:layout_anchor="@+id/ListViewID"
+        app:layout_anchorGravity="bottom|right"
+
+        app:fabSize="normal"
+        app:srcCompat="@android:drawable/ic_menu_share"
+        android:id="@+id/FabBtnID"
+        app:backgroundTint="@android:color/holo_red_dark"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="25dp" />
+</android.support.design.widget.CoordinatorLayout>
